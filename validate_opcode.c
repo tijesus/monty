@@ -14,6 +14,10 @@ void validate_opcode(void)
 		{"swap", &swap},
 		{"add", &add},
 		{"nop", &nop},
+		{"sub", &sub},
+		{"div", &div_},
+		{"mul", &mul},
+		{"mod", &mod},
 		{NULL, NULL}
 	};
 
