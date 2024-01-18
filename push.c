@@ -1,5 +1,9 @@
 #include "monty.h"
-
+/**
+ * push - push to the top of the node or stack
+ * @stack: pointer to stack pointer
+ * @line_number: line of in the file
+*/
 void push(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 {
 	stack_t *node;

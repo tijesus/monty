@@ -1,5 +1,7 @@
 #include "monty.h"
-
+/**
+ * free_stack - function to free stack
+*/
 void free_stack(void)
 {
 	stack_t *current = arguments.bottom;

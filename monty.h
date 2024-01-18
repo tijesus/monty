@@ -21,9 +21,9 @@
 */
 typedef struct stack_s
 {
-int n;
-struct stack_s *prev;
-struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -36,23 +36,37 @@ struct stack_s *next;
 */
 typedef struct instruction_s
 {
-char *opcode;
-void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct argument_s - representing the arguments for the Monty interpreter
+ * @fp: - pointer to the file
+ * @line: buffer to store a line from the file
+ * @filename: buffer to store the filename
+ * @token_array: array to store tokenized elements
+ * @comment: flag indicating if the line is a comment
+ * @line_number: current line number being processed
+ * @opcode_function: Function pointer for opcode execution
+ * @top: top of the stack
+ * @stack_length:  length of the stack
+ * @stack_flag: flag indicating stack or queue behavior
+ * @bottom: bottom of the stack
+*/
 typedef struct argument_s
 {
-FILE *fp;
-char line[MAX];
-char filename[MAX];
-char *token_array[MAX];
-unsigned int comment;
-unsigned int line_number;
-void (*opcode_function)(stack_t **stack, unsigned int line_number);
-stack_t *top;
-unsigned int stack_length;
-unsigned int stack_flag;
-stack_t *bottom;
+	FILE *fp;
+	char line[MAX];
+	char filename[MAX];
+	char *token_array[MAX];
+	unsigned int comment;
+	unsigned int line_number;
+	void (*opcode_function)(stack_t **stack, unsigned int line_number);
+	stack_t *top;
+	unsigned int stack_length;
+	unsigned int stack_flag;
+	stack_t *bottom;
 } argument_t;
 /*===============================Structs===========================*/
 

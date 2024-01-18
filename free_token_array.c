@@ -1,5 +1,7 @@
 #include "monty.h"
-
+/**
+ * free_token_array - function to free token
+*/
 void free_token_array(void)
 {
 	int i = 0;

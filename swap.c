@@ -1,6 +1,8 @@
 #include "monty.h"
 
-
+/**
+ * swap_error - error encounered while swapping
+*/
 void swap_error(void)
 {
 	dprintf(2, "L%d: can't swap, stack too short\n", arguments.line_number);
@@ -9,7 +11,11 @@ void swap_error(void)
 	free_stack();
 	exit(EXIT_FAILURE);
 }
-
+/**
+ * swap - error encounered while swapping
+ * @stack: pointer to stack pointer
+ * @line_number: line found in the file
+*/
 void swap(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 {
 	stack_t *_top;

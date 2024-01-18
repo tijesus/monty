@@ -1,5 +1,7 @@
 #include "monty.h"
-
+/**
+ * validate_opcode - checking through the opcode
+*/
 void validate_opcode(void)
 {
 	int i = 0;

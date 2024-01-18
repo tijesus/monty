@@ -1,5 +1,7 @@
 #include "monty.h"
-
+/**
+ * tokenize - function to tokenize file
+*/
 void tokenize(void)
 {
 	char line_dup[MAX];

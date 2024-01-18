@@ -2,7 +2,12 @@
 
 /*Global Varibles*/
 argument_t arguments;
-
+/**
+ * main - entry point
+ * @argc: arcument count
+ * @argv: argument vector
+ * Return: 0 on success
+*/
 int main(int argc, char **argv)
 {
 	check_args(argc);

@@ -1,5 +1,7 @@
 #include "monty.h"
-
+/**
+ * initialize_arguments - function to initialize arguements for file
+*/
 void initialize_arguments(void)
 {
 	arguments.line_number = 1;

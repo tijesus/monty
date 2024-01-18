@@ -1,5 +1,7 @@
 #include "monty.h"
-
+/**
+ * pop_error - print error on top of the stack or node problem
+*/
 void pop_error(void)
 {
 	dprintf(2, "L%d: can't pop an empty stack\n", arguments.line_number);
@@ -8,7 +10,11 @@ void pop_error(void)
 	free_stack();
 	exit(EXIT_FAILURE);
 }
-
+/**
+ * pop - remove top of stack
+ * @stack: pointer to stack pointer
+ * @line_number: line founf in the file
+*/
 void pop(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 {
 	if (*stack == NULL)

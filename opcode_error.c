@@ -1,5 +1,7 @@
 #include "monty.h"
-
+/**
+ * opcode_error - function that carries out the operation code error
+*/
 void opcode_error(void)
 {
 	char array[] = "unknown instruction";
